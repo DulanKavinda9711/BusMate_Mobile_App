@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backimg"
+    android:id="@+id/drawerLayout"
+    tools:context=".MainActivity">
+
+    <!-- Main content layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Include the toolbar -->
+        <include
+            layout="@layout/toolbar"/>
+
+        <!-- Add a title for the bus schedule with improved styling -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bus Schedule"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/title_background"
+            android:elevation="4dp"/>
+
+        <!-- Search functionality with improved UI -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Search buses..."
+                    android:padding="12dp"
+                    android:background="@drawable/search_input_background"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="12dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    android:imeOptions="actionSearch"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search by:"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/darkGray"/>
+
+                <RadioGroup
+                    android:id="@+id/searchOptionRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:gravity="center_vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioBusNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bus Number"
+                        android:checked="true"
+                        android:buttonTint="@color/purple"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="16dp"/>
+
+                    <RadioButton
+                        android:id="@+id/radioRouteName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Route Name"
+                        android:buttonTint="@color/purple"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="16dp"/>
+
+                    <RadioButton
+                        android:id="@+id/radioRouteNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Route Number"
+                        android:buttonTint="@color/purple"
+                        android:textSize="14sp"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Status indicator for search results -->
+        <TextView
+            android:id="@+id/resultsStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Showing all buses"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/darkGray"
+            android:visibility="visible"/>
+
+        <!-- ScrollView to make the table scrollable with improved styling -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false">
+
+                    <!-- TableLayout to display bus data -->
+                    <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:shrinkColumns="1dp"
+                        android:stretchColumns="2dp" />
+
+                </ScrollView>
+            </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Navigation Drawer with improved styling -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        app:itemIconTint="@color/purple"
+        app:itemTextColor="@color/darkGray"
+        app:headerLayout="@layout/nav_header">
+
+        <!-- Include the navigation drawer layout -->
+        <include
+            layout="@layout/nav_drawer"/>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

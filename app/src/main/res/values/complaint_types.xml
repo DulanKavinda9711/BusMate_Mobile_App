@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Add this to your existing arrays.xml file -->
+    <string-array name="complaint_types">
+        <item>Select Complaint Type</item>
+        <item>Driver Behavior</item>
+        <item>Vehicle Condition</item>
+        <item>Schedule/Timing Issues</item>
+        <item>Cleanliness</item>
+        <item>Overcrowding</item>
+        <item>Safety Concerns</item>
+        <item>Payment Issues</item>
+        <item>Others</item>
+    </string-array>
+</resources>

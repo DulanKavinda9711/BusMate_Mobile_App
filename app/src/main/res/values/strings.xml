@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BusMate</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="user_types">
+        <item>Select User Type</item> <!-- This acts as the hint -->
+        <item>Conductor</item>
+        <item>Passenger</item>
+    </string-array>
+</resources>

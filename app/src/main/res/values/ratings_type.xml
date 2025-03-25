@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- New rating categories -->
+    <string-array name="rating_categories">
+        <item>Select Rating Category</item>
+        <item>Bus Service</item>
+        <item>Driving Quality</item>
+        <item>Staff Behavior</item>
+        <item>Comfort</item>
+        <item>Cleanliness</item>
+        <item>Punctuality</item>
+        <item>Safety</item>
+        <item>Overall Experience</item>
+    </string-array>
+</resources>

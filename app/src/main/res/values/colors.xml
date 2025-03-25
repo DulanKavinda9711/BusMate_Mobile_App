@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lavender">#8692f7</color>
+    <color name="purple">#8692f7</color>
+    <color name="lightGray">#F1F1F1</color>
+    <!-- res/values/colors.xml -->
+    <color name="hintColor">#B0BEC5</color> <!-- Light gray color for the hint text -->
+
+    <color name="dark_gray">#666666</color>
+
+
+    <color name="purple_dark">#3700B3</color>
+    <color name="purple_light">#BB86FC</color>
+    <color name="teal">#03DAC5</color>
+    <color name="teal_dark">#018786</color>
+
+    <color name="mediumGray">#E0E0E0</color>
+    <color name="darkGray">#666666</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="yellow">#FFC107</color>
+
+
+
+
+</resources>
